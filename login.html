@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Login</h1>
+
+    <!-- הודעה אם יש אורח נבחר -->
+    <div id="selectedGuestMessage" style="display: none">
+      <p>כבר קיים אורח נבחר. האם ברצונך להתנתק?</p>
+      <button id="disconnectButton">התנתק</button>
+    </div>
+
+    <!-- פילטר לחיפוש אורח -->
+    <input
+      type="text"
+      id="guestSearchInput"
+      placeholder="Search visitor by name"
+    />
+
+    <!-- כרטיסיות של האורחים -->
+    <section id="guestCards">
+      <!-- כאן ייצגו כרטיסיות האורחים -->
+    </section>
+    <!-- צרו את הטופס בחירת אורח כאן מעל הסקריפט -->
+    <script src="./login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup_style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 class="title">Welcome to the Zoo</h1>
+    </div>
+    <div class="container">
+      <div class="form-container">
+        <form id="create-visitor-form" onsubmit="clearForm()">
+          <h2>please sing up to join</h2>
+          <input type="text" id="firsName" placeholder="First Name" required />
+
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Last Name"
+            class="signupLname__input"
+            required
+          />
+
+          <input
+            type="text"
+            id="id"
+            placeholder="ID"
+            class="signupID__input"
+            pattern="\d+"
+            required
+          />
+          <input
+            type="submit"
+            value="Sign up"
+            class="contact__button button"
+            required
+          />
+        </form>
+      </div>
+    </div>
+    <script src="./signup.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
