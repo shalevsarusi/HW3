@@ -5,19 +5,21 @@ function createNewVisitor(event) {
   // ביטול התנהגות דיפולטיבית של שליחת טופס
   // קראו עוד כאן: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
   event.preventDefault();
-  const firstName = document.getElementById(firstName).value;
-  const lastName = document.getElementById(lastName).value;
-  const ID = document.getElementById(ID).value;
+  let visitors = [];
+  let FullName = document.getElementById("FullName").value;
+  let coins = 50;
 
   const newVisitor = {
-    firstName: firstName,
-    lastName: lastName,
-    ID: ID,
+    FullName: FullName,
+    coins: coins,
   };
+  visitors.push(newVisitor);
 
   // local storage:
-  let visitors = JSON.parse(localStorage.getItem(visitors));
 
+  localStorage.setItem("visitors", JSON.stringify(newVisitor));
+  visitors.push(JSON.parse(localStorage.getItem("visitors")));
+  console.log(newVisitor);
   //העברה לעמוד התחברות
   window.location.href = "/login.html";
 
