@@ -1,25 +1,36 @@
-function clearForm() {
-  document.getElementById("create-visitor-form").reset();
-}
+const createVisitorForm = document.getElementById("create-visitor-form");
+
 function createNewVisitor(event) {
   // ביטול התנהגות דיפולטיבית של שליחת טופס
   // קראו עוד כאן: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
   event.preventDefault();
-  let visitors = [];
-  let FullName = document.getElementById("FullName").value;
+  //let visitors = [];
+  const name = document.getElementById("name").value;
   let coins = 50;
 
   const newVisitor = {
-    FullName: FullName,
+    name: name,
     coins: coins,
   };
-  visitors.push(newVisitor);
+  visitorsarray = localStorage.getItem("visitors");
+  console.log(visitorsarray);
+  visitorss = JSON.parse(visitorsarray);
+  visitorss.push(newVisitor);
+  localStorage.setItem("visitors", JSON.stringify(visitorss));
+
+  function clearForm() {
+    document.getElementById("create-visitor-form").reset();
+  }
+  //vist = JSON.parse(visitorsarray);
+  // console.log(vist);
+  // vist.push(newVisitor);.p
+
+  // visitors.push(newVisitor);
 
   // local storage:
 
-  localStorage.setItem("visitors", JSON.stringify(newVisitor));
-  visitors.push(JSON.parse(localStorage.getItem("visitors")));
-  console.log(newVisitor);
+  // visitors.push(JSON.parse(localStorage.getItem("visitors")));
+  //console.log(newVisitor);
   //העברה לעמוד התחברות
   window.location.href = "/login.html";
 

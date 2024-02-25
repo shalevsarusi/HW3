@@ -1,11 +1,11 @@
-body {
+/* body {
   background-image: url("/m0xs_h1ci_210426.jpg");
-  background-size: cover; /* כך שהתמונה תכסה את כל הדף */
-  background-repeat: no-repeat; /* לא לחזור על התמונה */
+  background-size: cover; 
+  background-repeat: no-repeat; 
   background-position: center;
   background-size: 100% 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
+} */
 .container {
   display: flex;
   justify-content: center;
